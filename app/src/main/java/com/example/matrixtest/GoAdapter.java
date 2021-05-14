@@ -41,7 +41,7 @@ public class GoAdapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.linearLayout.setMinimumWidth(10*40/col);
         test(position);
         Log.v("pos",""+position);
-        for (int i = 0; i<dem-1;i++){
+        for (int i = 0; i<dem;i++){
             if (position==G[i]&&test(position)!=0){
                 holder.linearLayout.setBackgroundResource(R.color.red);
                 holder.textView.setText("x");
@@ -69,23 +69,17 @@ public class GoAdapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         int k = 0;
         int testPosition = 0;
         for (int i = 0; i < dem; i++) {
-            if (n + 1 == G[i]&&(n+1)%8!=0) {
-                k++;
-            }
-        }
-        for (int i = 0; i < dem; i++) {
+            if (n + 1 == G[i]&&(n+1)%col!=0) {
+                k=1;
+            } else
             if (n - 1 == G[i]&&n%col!=0) {
-                k++;
-            }
-        }
-        for (int i = 0; i < dem; i++) {
+                k=1;
+            } else
             if (n + col == G[i]) {
-                k++;
-            }
-        }
-        for (int i = 0; i < dem; i++) {
+                k=1;
+            } else
             if (n - col == G[i]) {
-                k++;
+                k=1;
             }
         }
         if (k != 0) testPosition = 1;

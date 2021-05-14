@@ -52,11 +52,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
                     mainActivity.Gmain[dem]=position;
                     dem++;
                     mainActivity.dem=dem;
-                    Log.v("AAA",position/col+"/"+position%col);
-                    Log.v("H",""+mainActivity.Gmain[dem]);
-                    Log.v("DEM",""+mainActivity.dem);
-//
-
                 }
             }
         }
